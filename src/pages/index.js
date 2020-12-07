@@ -1,22 +1,35 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hello from "../images/hello.gif"
+import Tenor from "../images/tenor.gif"
+import Welcome from "../images/welcome.gif"
+import UnderConstruction from "../images/under-construction-1.gif"
+
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+    <>
+        <SEO title="HomePage" />
+        <br /> <br />
+        <center>
+        <img src={Hello} />
+
+        <p>Welcome to my homepage! <br /> I hope you enjoy the stay.</p>
+        </center>
+        <center>
+        <p>
+          <img src={Welcome} /> <br />
+
+          <button className="button"><Link className="link-button" to="/homepage">Enter</Link></button>
+
+        </p>
+
+        <img src={Tenor} height="100px" /> <br />
+        <img src={UnderConstruction} />
+      </center>
+    </>
+
 )
 
 export default IndexPage
