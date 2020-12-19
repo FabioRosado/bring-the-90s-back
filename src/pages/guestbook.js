@@ -1,6 +1,5 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { useForm } from "react-hook-form"
-import {graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,16 +8,20 @@ import InviPixel from "../images/1x1.png"
 
 const GuestBook = (props) => {
     const [isDisabled, setDisabled] = useState(false)
-    const [messages, setMessages] = useState(props.data.allAirtable.nodes)
+    // const [messages, setMessages] = useState(props.data.allAirtable.nodes)
     const { register, handleSubmit, errors} = useForm()
+    const currentDate = new Date().toISOString().slice(0, 10)
+    let [messages, setMessages] = useState([])
 
     const onSubmit = form => {
         const fields = {"fields": {
-        "Title": form.title,
-        "Name": form.name,
-        "Email": form.email,
-        "Message": form.message
+        "Title": form.Title,
+        "Name": form.Name,
+        "Email": form.Email,
+        "Message": form.Message
         }}
+        console.log(form.title)
+      messages.push({data: {Email: form.Email, Name: form.Name, Title: form.Title, Message: form.Message, date: currentDate}})
     
     if (!isDisabled) {
       fetch("/.netlify/functions/guestbook", {
@@ -29,11 +32,35 @@ const GuestBook = (props) => {
          
         console.log("sent", result)
       })
-        messages.push({data: {email: form.email, name: form.name, title: form.title, message: form.message}})
+      messages.push({data: {Email: form.Email, Name: form.Name, Title: form.Title, Message: form.Message, date: currentDate}})
       
       setDisabled(true)
     }
   }
+
+  const getAllMessages = (records) => {
+      const messages = []
+      records.map(message => messages.push({data: message.fields}))
+
+      return messages
+  }
+
+  
+  useEffect(() => {
+      async function getMessages () {
+        let response = await fetch("/.netlify/functions/getMessages", {
+            method: "GET",
+        })
+        const data = await response.json()
+
+        const messages = getAllMessages(data.records)
+
+        console.log(messages)
+        setMessages(messages)
+        }
+
+        getMessages()
+    })
 
 
     return (
@@ -49,7 +76,7 @@ const GuestBook = (props) => {
 
                     return (
                         <>
-                            <tr className="guestbook-row" key={data.Email+data.Title}>
+                            <tr className="guestbook-row" key={Math.random() * 100}>
                                 <thead style={{backgroundColor: "blue"}}>
                                     <td>
                                     <bold>Title: </bold>
@@ -79,24 +106,24 @@ const GuestBook = (props) => {
             <form onSubmit={handleSubmit(onSubmit)}>
             <label>
                 Title: <br />
-                <input name="title" ref={register({ required: true })} />
+                <input name="Title" ref={register({ required: true })} />
             </label>
             <br />
             <label>
                 Name: <br />
-                <input name="name" ref={register({required: true})} />
+                <input name="Name" ref={register({required: true})} />
             </label>
             <br />
 
             <label>
                 Email:<br />
-                <input name="email" ref={register({required: true})} />
+                <input name="Email" ref={register({required: true})} />
             </label>
             <br />
 
             <label>
                 Message: <br />
-                <textarea name="message" ref={register({required: true})} />
+                <textarea name="Message" ref={register({required: true})} />
             </label>
             <br />
             {errors.exampleRequired && <span>This field is required</span>}
@@ -113,20 +140,3 @@ const GuestBook = (props) => {
 
 
 export default GuestBook
-
-export const pageQuery = graphql`
-{
-    allAirtable {
-        nodes {
-        table
-        data {
-            Email
-            Message
-            Name
-            Title
-            date
-        }
-        }
-    }
-}
-`
