@@ -22,7 +22,7 @@ const SecondPage = () => (
     <img src={Pizza} alt="pizza" />
     <p>I like to drink coffee and eat pizza</p>
 
-    <img src={UnderConstruction} />
+    <img src={UnderConstruction} alt="under construction" />
   </Layout>
 )
 

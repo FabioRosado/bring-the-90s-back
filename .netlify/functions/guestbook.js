@@ -1,6 +1,7 @@
 const fetch = require('node-fetch')
 
 exports.handler = async (event, context, callback) => {
+  console.log(event.body)
   const pass = (body) => {callback(null, {statusCode: 200, body: JSON.stringify(body)})}
     let response = await fetch(process.env.GATSBY_AIRTABLE_URL,
     {

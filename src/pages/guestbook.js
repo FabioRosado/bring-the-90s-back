@@ -9,8 +9,9 @@ import InviPixel from "../images/1x1.png"
 
 const GuestBook = (props) => {
     const [isDisabled, setDisabled] = useState(false)
-    const [messages, setMessages] = useState(props.data.allAirtable.nodes)
+    // const [messages, setMessages] = useState(props.data.allAirtable.nodes)
     const { register, handleSubmit, errors} = useForm()
+    const messages = []
 
     const onSubmit = form => {
         const fields = {"fields": {
@@ -100,6 +101,10 @@ const GuestBook = (props) => {
             </label>
             <br />
             {errors.exampleRequired && <span>This field is required</span>}
+            {errors.email && <p className="red">Email field is required.</p>}
+            {errors.message && <p className="red">Message field is required.</p>}
+            {errors.name && <p className="red">Name field is required.</p>}
+            {errors.title && <p className="red">Title field is required.</p>}
             
             <button type="submit" disabled={isDisabled}>Send Message</button>
             </form>
@@ -110,18 +115,18 @@ const GuestBook = (props) => {
 
 export default GuestBook
 
-export const pageQuery = graphql`
-{
-    allAirtable {
-        nodes {
-        table
-        data {
-            Email
-            Message
-            Name
-            Title
-        }
-        }
-    }
-}
-`
+// export const pageQuery = graphql`
+// {
+//     allAirtable {
+//         nodes {
+//         table
+//         data {
+//             Email
+//             Message
+//             Name
+//             Title
+//         }
+//         }
+//     }
+// }
+// `

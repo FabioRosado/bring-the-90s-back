@@ -630,3 +630,7 @@ bold {
   color: white;
   text-decoration: none;
 }
+
+.red {
+  color: red;
+}
