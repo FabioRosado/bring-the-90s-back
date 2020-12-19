@@ -6,6 +6,8 @@ import Hello from "../images/hello.gif"
 import Tenor from "../images/tenor.gif"
 import Welcome from "../images/welcome.gif"
 import UnderConstruction from "../images/under-construction-1.gif"
+import IE from "../images/ie.png"
+import Netscape from "../images/netscape.png"
 
 
 const IndexPage = () => (
@@ -27,6 +29,11 @@ const IndexPage = () => (
 
         <img src={Tenor} height="100px" alt="" /> <br />
         <img src={UnderConstruction} alt="under construction" />
+
+        <p>Copyright 2020-present Fabio Rosado.</p>
+
+        <p className="small-text">This page will not work on:</p>
+        <img className="small-image" src={IE} alt="ie" /> <img className="small-image" src={Netscape} alt="Netscape" />
       </center>
     </>
 

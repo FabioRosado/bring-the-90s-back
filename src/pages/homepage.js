@@ -6,6 +6,8 @@ import UnderConstruction from "../images/under-construction-2.gif"
 import Hello from "../images/hello.gif"
 import Pizza from "../images/pizza.gif"
 import Coffee from "../images/coffee.gif"
+import RetroHitCounter from 'react-retro-hit-counter'
+
 
 const SecondPage = () => (
   <Layout>
@@ -22,7 +24,28 @@ const SecondPage = () => (
     <img src={Pizza} alt="pizza" />
     <p>I like to drink coffee and eat pizza</p>
 
+    <center>
     <img src={UnderConstruction} alt="under construction" />
+    <br />
+      <RetroHitCounter
+        hits={1337}
+        /* The following are all default values: */
+        withBorder={true}
+        withGlow={false}
+        minLength={4}
+        size={30}
+        padding={4}
+        digitSpacing={3}
+        segmentThickness={4}
+        segmentSpacing={0.5}
+        segmentActiveColor="#76FF03"
+        segmentInactiveColor="#315324"
+        backgroundColor="#222222"
+        borderThickness={4}
+        glowStrength={0.5}
+      />
+
+    </center>
   </Layout>
 )
 

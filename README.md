@@ -28,3 +28,9 @@ Like any great 90s website, I needed a lot of cool gifs to include on the page. 
 
 - https://90s-gifs.tumblr.com/
 - https://www.gifs-paradise.com/
+
+## Counter and ideas
+
+- [Josh Comeau Retro hit counter](https://joshwcomeau.github.io/react-retro-hit-counter/)
+
+Also thank you Josh for the inspiration on the website - I had to add those badges that says the site don't work on IE and Nescape haha
