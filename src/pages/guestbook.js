@@ -11,7 +11,6 @@ const GuestBook = (props) => {
     const [isDisabled, setDisabled] = useState(false)
     const [messages, setMessages] = useState(props.data.allAirtable.nodes)
     const { register, handleSubmit, errors} = useForm()
-    const messages = []
 
     const onSubmit = form => {
         const fields = {"fields": {
@@ -50,23 +49,23 @@ const GuestBook = (props) => {
 
                     return (
                         <>
-                            <tr className="guestbook-row" key={data.email+data.title}>
+                            <tr className="guestbook-row" key={data.Email+data.Title}>
                                 <thead style={{backgroundColor: "blue"}}>
                                     <td>
                                     <bold>Title: </bold>
                                     </td>
-                                    <td style={{backgroundColor: "blue"}}>{data.title}</td>
+                                    <td style={{backgroundColor: "blue"}}>{data.Title}</td>
                                 </thead>
                                 <tr className="message-area">
                                 <td>
                                     <tr><bold>Date:</bold></tr>
                                     <tr>{data.date}</tr>
                                     <tr><bold>Name:</bold></tr>
-                                    <tr>{data.name}</tr>
+                                    <tr>{data.Name}</tr>
                                 </td>
                                 <td className="guestbook-message">
                                     <bold>Message:</bold> <br />
-                                    {data.message}
+                                    {data.Message}
                                 </td>
                                 </tr>
                             </tr>
@@ -125,6 +124,7 @@ export const pageQuery = graphql`
             Message
             Name
             Title
+            date
         }
         }
     }
