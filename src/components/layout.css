@@ -4,8 +4,12 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  background-color: black;
+  color: white;
 }
 body {
+  background-color: black;
+  color: white;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -545,23 +549,16 @@ thead {
 td,
 th {
   text-align: left;
+  max-width: 600px;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
   -webkit-font-feature-settings: "tnum";
-  padding-left: 0.96667rem;
-  padding-right: 0.96667rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
 }
 tt,
 code {
@@ -596,10 +593,6 @@ pre tt:after {
   }
 }
 
-html {
-  background-color: black;
-  color: white;
-}
 
 button {
     border: 1px solid black;
@@ -618,5 +611,23 @@ button:hover {
 
 .link-button {
   color: black;
+  text-decoration: none;
+}
+
+bold {
+  font-weight: bold;
+}
+
+.guestbook-row {
+  border: 2px solid;
+  padding: 1rem;
+}
+
+.column-message {
+  width: 100%;
+}
+
+.white {
+  color: white;
   text-decoration: none;
 }

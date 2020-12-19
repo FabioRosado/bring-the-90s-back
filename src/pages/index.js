@@ -10,23 +10,23 @@ import UnderConstruction from "../images/under-construction-1.gif"
 
 const IndexPage = () => (
     <>
-        <SEO title="HomePage" />
+        <SEO title="Welcome" />
         <br /> <br />
         <center>
-        <img src={Hello} />
+        <img src={Hello} alt="hello" />
 
         <p>Welcome to my homepage! <br /> I hope you enjoy the stay.</p>
         </center>
         <center>
         <p>
-          <img src={Welcome} /> <br />
+          <img src={Welcome}  alt="welcome"/> <br />
 
           <button className="button"><Link className="link-button" to="/homepage">Enter</Link></button>
 
         </p>
 
-        <img src={Tenor} height="100px" /> <br />
-        <img src={UnderConstruction} />
+        <img src={Tenor} height="100px" alt="" /> <br />
+        <img src={UnderConstruction} alt="under construction" />
       </center>
     </>
 

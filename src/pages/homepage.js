@@ -9,17 +9,17 @@ import Coffee from "../images/coffee.gif"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Homepage" />
 
     <center>
-      <img src={Hello} />
+      <img src={Hello} alt="hello" />
     </center>
 
     <h1>Welcome to my page!</h1>
 
     <p>My name is Fabio and I am a Portuguese living in the UK! I work as a flight attendant and I'm hoping to becoming a full time developer in the future.</p>
-    <img src={Coffee} />
-    <img src={Pizza} />
+    <img src={Coffee} alt="coffee" />
+    <img src={Pizza} alt="pizza" />
     <p>I like to drink coffee and eat pizza</p>
 
     <img src={UnderConstruction} />

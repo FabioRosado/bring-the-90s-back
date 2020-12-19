@@ -30,22 +30,30 @@ const Layout = ({ children }) => {
 
   return (
     <>
-     <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+     <Header siteTitle={data.site.siteMetadata?.title || `Bring the 90s Back`} />
       <table style={{margin: "1rem"}}>
         <tbody height="100vh"> 
           <tr>
             <td>
               <tr>
-                <img src={Home} />
+                <a href="/homepage">
+                  <img src={Home} alt="Home" />
+                </a>
               </tr>
               <tr>
-                <img src={Links} />
+                <a href="/links">
+                  <img src={Links} alt="Links" />
+                </a>
               </tr>
               <tr>
-                <img src={Guests} />
+                <a href="/guestbook">
+                  <img src={Guests} alt="Guests" />
+                </a>
               </tr>
               <tr>
-                <img src={Email} />
+                <a href="mailto:hello@fabiorosado.dev">
+                  <img src={Email} alt="email" />
+                </a>
               </tr>
 
             </td>
