@@ -9,7 +9,7 @@ import InviPixel from "../images/1x1.png"
 
 const GuestBook = (props) => {
     const [isDisabled, setDisabled] = useState(false)
-    // const [messages, setMessages] = useState(props.data.allAirtable.nodes)
+    const [messages, setMessages] = useState(props.data.allAirtable.nodes)
     const { register, handleSubmit, errors} = useForm()
     const messages = []
 
