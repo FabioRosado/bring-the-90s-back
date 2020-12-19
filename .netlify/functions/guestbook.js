@@ -8,7 +8,7 @@ exports.handler = async (event, context, callback) => {
     {
       method: 'POST',
       headers: {
-        "Authorization": `${process.env.GATSBY_AIRTABLE_KEY}`,
+        "Authorization": `Bearer ${process.env.GATSBY_AIRTABLE_KEY}`,
         "Content-Type": "application/json"
       },
       body: event.body
