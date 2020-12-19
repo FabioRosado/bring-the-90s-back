@@ -115,18 +115,18 @@ const GuestBook = (props) => {
 
 export default GuestBook
 
-// export const pageQuery = graphql`
-// {
-//     allAirtable {
-//         nodes {
-//         table
-//         data {
-//             Email
-//             Message
-//             Name
-//             Title
-//         }
-//         }
-//     }
-// }
-// `
+export const pageQuery = graphql`
+{
+    allAirtable {
+        nodes {
+        table
+        data {
+            Email
+            Message
+            Name
+            Title
+        }
+        }
+    }
+}
+`
