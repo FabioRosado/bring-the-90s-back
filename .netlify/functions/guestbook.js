@@ -11,6 +11,5 @@ exports.handler = async (event, context, callback) => {
       },
       body: event.body
     })
-    console.log(response)
     await pass(`Message Sent!`)
 }

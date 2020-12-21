@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 exports.handler = async (event) => {
     let getHits = await fetch(`https://api.airtable.com/v0/${process.env.GATSBY_AIRTABLE_ID}/hits?view=Grid%20view`,
         {
