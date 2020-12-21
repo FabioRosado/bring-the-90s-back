@@ -52,10 +52,8 @@ const GuestBook = (props) => {
             method: "GET",
         })
         const data = await response.json()
-        console.log(data)
         const messages = getAllMessages(data)
 
-        console.log(messages)
         setMessages(messages)
         }
 

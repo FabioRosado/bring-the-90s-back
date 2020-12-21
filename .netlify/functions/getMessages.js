@@ -11,6 +11,5 @@ exports.handler = async (event, context, callback) => {
       },
     })
     const data = await response.json()
-    console.log(data)
     await pass(data.records)
 }

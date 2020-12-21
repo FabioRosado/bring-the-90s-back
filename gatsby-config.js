@@ -38,7 +38,7 @@ module.exports = {
         tables: [
           {
             baseId: process.env.GATSBY_AIRTABLE_ID,
-            tableName: `guestbook`,
+            tableName: "hits"
           }
         ]
       }
