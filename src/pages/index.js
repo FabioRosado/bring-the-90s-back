@@ -8,6 +8,7 @@ import Welcome from "../images/welcome.gif"
 import UnderConstruction from "../images/under-construction-1.gif"
 import IE from "../images/ie.png"
 import Netscape from "../images/netscape.png"
+import "../components/layout.css"
 
 
 const IndexPage = () => (
