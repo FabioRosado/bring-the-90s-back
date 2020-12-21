@@ -20,6 +20,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  cursor: url(https://bring-the-90s-back.netlify.app/static/red_cursor.png), move !important;
 }
 article,
 aside,

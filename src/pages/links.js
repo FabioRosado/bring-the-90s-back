@@ -19,6 +19,9 @@ const Links = () => (
             <li>
                 <a href="http://www.aliweb.com/">Find all you need</a>
             </li>
+            <li>
+                <a href="http://www.rw-designer.com/cursor-library/set-40">Cool cursors</a>
+            </li>
         </ul>
     </Layout>
 )

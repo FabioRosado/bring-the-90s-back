@@ -33,4 +33,4 @@ Like any great 90s website, I needed a lot of cool gifs to include on the page. 
 
 - [Josh Comeau Retro hit counter](https://joshwcomeau.github.io/react-retro-hit-counter/)
 
-Also thank you Josh for the inspiration on the website - I had to add those badges that says the site don't work on IE and Nescape haha
+Also thank you Josh for the inspiration on the website - I had to add those badges that says the site don't work on IE and Nescape hahat s
