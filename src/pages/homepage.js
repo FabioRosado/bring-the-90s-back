@@ -23,7 +23,7 @@ const SecondPage = (props) => {
           setHits(json.hits)
         }
       })
-  })
+  }, [])
 
   return (
     <Layout>
