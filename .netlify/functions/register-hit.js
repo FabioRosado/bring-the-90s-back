@@ -13,7 +13,7 @@ exports.handler = async (event) => {
 
     const hitCounter = await getHits.json()
 
-    console.log(hitCounter())
+    console.log(hitCounter)
 
     let updateHit = await fetch(`https://api.airtable.com/v0/${process.env.GATSBY_AIRTABLE_ID}/hits`, {
         method: 'PATCH',
