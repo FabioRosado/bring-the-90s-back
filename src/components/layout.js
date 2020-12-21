@@ -37,22 +37,22 @@ const Layout = ({ children }) => {
             <td>
               <tr>
                 <a href="/homepage">
-                  <img src={Home} alt="Home" />
+                  <img src={Home} alt="Home" width="124px" height="53px" />
                 </a>
               </tr>
               <tr>
                 <a href="/links">
-                  <img src={Links} alt="Links" />
+                  <img src={Links} alt="Links"  width="124px" height="53px" />
                 </a>
               </tr>
               <tr>
                 <a href="/guestbook">
-                  <img src={Guests} alt="Guests" />
+                  <img src={Guests} alt="Guests" width="124px" height="53px" />
                 </a>
               </tr>
               <tr>
                 <a href="mailto:hello@fabiorosado.dev">
-                  <img src={Email} alt="email" />
+                  <img src={Email} alt="email" width="124px" height="53px" />
                 </a>
               </tr>
 
